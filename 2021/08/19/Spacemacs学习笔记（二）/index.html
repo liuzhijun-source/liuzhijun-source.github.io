@@ -68,6 +68,8 @@
       
       
       <h1 id="Spacemacs学习笔记（二）"><a href="#Spacemacs学习笔记（二）" class="headerlink" title="Spacemacs学习笔记（二）"></a>Spacemacs学习笔记（二）</h1><h2 id="用eww浏览网页"><a href="#用eww浏览网页" class="headerlink" title="用eww浏览网页"></a>用eww浏览网页</h2><p>以前学习，看网上的文档时一边要开个emacs，另一边又要开一个浏览器，很不方便。而且我希望大多数事情都可以在emacs里面完成，所以想在emacs里面浏览网页，而emacs就自带了一个浏览器eww可以浏览网页。</p>
+<span id="more"></span>
+
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>输入<code>M-x eww</code>之后就会要求你输入网址，输入正确的网址之后就可以打开网页了，此时用<code>C-x 3</code>左右分屏，可以用<code>C-M-v</code>让另一个屏幕向下翻页，用<code>C-M-V</code>向上翻页，一边写文档一边看资料，简直不要太爽。在使用浏览器的时候可以直接用键盘打开，关闭和浏览网页。如果要返回上一个网页，直接在浏览器中按<code>l</code>就可以了，如果要刷新网页可以按<code>g</code>，访问下一个网页可以按<code>r</code>。</p>
 <h3 id="常用功能列表"><a href="#常用功能列表" class="headerlink" title="常用功能列表"></a>常用功能列表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> M-x eww //进入浏览器</span><br><span class="line">********************************************</span><br><span class="line">     eww浏览器快捷键</span><br><span class="line">********************************************</span><br><span class="line">按键	函数	作用</span><br><span class="line">q	eww-quit	退出eww</span><br><span class="line">g	eww-reload	重载该页面</span><br><span class="line">w	eww-copy-page-url	拷贝当前URL到kill ring</span><br><span class="line">d	eww-download	下载光标所在的URL,下载的目录存在变量`eww-download-directory`中,默认为~/Downloads</span><br><span class="line">l	eww-back-url	回退上一个URL</span><br><span class="line">r	eww-forward-url	前进到下一个URL</span><br><span class="line">H	eww-list-histories	显示浏览历史</span><br><span class="line">b	eww-add-bookmark	加书签</span><br><span class="line">B	eww-list-bookmarks	显示书签列表</span><br><span class="line">&amp;	eww-browse-with-external-browser	使用外部浏览器打开当前浏览的URL,外部浏览器由变量`shr-external-browser`决定</span><br><span class="line">v	eww-view-source	查看页面源代码</span><br><span class="line">C	eww-cookie-list	列示Cookie</span><br><span class="line"> </span><br><span class="line">********************************************</span><br><span class="line"> </span><br><span class="line">2.~/.emacs添加</span><br><span class="line">;;记录打开过的文件</span><br><span class="line">(recentf-mode 1)</span><br><span class="line">(global-set-key (kbd &quot;&lt;f7&gt;&quot;) &#x27;recentf-open-files)</span><br><span class="line"> </span><br><span class="line">;;Ctrl+c, Ctrl+x, Ctrl+v模式</span><br><span class="line">(cua-mode 1)</span><br><span class="line"> </span><br><span class="line">;;M-x: 输入命令补全（很爽)</span><br><span class="line">(icomplete-mode 1)</span><br><span class="line"> </span><br><span class="line">4.快捷键</span><br><span class="line">% + m //查找标记文件</span><br><span class="line">Alt + ! //输入shell命令</span><br><span class="line">C-h m //查看快捷键</span><br><span class="line">C-h e //查看emacs回显</span><br><span class="line">Alt + s o //查找字符,并显示列表(实测只适用Mac OS)</span><br><span class="line">Alt + s h . //查找字符,并高亮显示(实测只适用Mac OS）```</span><br></pre></td></tr></table></figure>
 
@@ -93,6 +95,15 @@
   
   
 <nav class="article-nav">
+  
+  <a href="/2021/08/20/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      Spacemacs学习笔记（三）
+      
+    </div>
+  </a>
   
   
   <a href="/2021/08/18/Spacemacs%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84layer%EF%BC%9F/" class="article-nav-link">
