@@ -8,7 +8,7 @@
   
   
   <title>
-    关于 |
+    Spacemacs学习笔记（六） |
     
     Dexloper
   </title>
@@ -31,7 +31,7 @@
 <body>
   <main class="content">
     <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
+  <article id="post-Spacemacs学习笔记（六）" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
       
 
 <h1 class="article-title" itemprop="name">
-  关于
+  Spacemacs学习笔记（六）
 </h1>
 
 
@@ -49,6 +49,17 @@
     
 
     
+    <div class="article-meta">
+      <a href="/2021/08/31/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" class="article-date">
+  <time datetime="2021-08-31T02:02:23.000Z" itemprop="datePublished">2021-08-31</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
 
     
 
@@ -56,28 +67,42 @@
       
       
       
-      <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>流年笑掷，未来可期。念念不忘，必有回响。</p>
-<p>一个学业繁忙的 <a target="_blank" rel="noopener" href="https://www.gnu.org/software/emacs/">Emacs</a> 教徒。</p>
-<p>电子邮箱：<a href="mailto:&#x4c;&#x69;&#x75;&#x2d;&#x5a;&#104;&#x69;&#106;&#x75;&#110;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x4c;&#x69;&#x75;&#x2d;&#x5a;&#104;&#x69;&#106;&#x75;&#110;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
-<h2 id="2021-年"><a href="#2021-年" class="headerlink" title="2021 年"></a>2021 年</h2><p>我有自己的博客啦！！！</p>
+      <h2 id="使用Hybrid风格的键盘布局"><a href="#使用Hybrid风格的键盘布局" class="headerlink" title="使用Hybrid风格的键盘布局"></a>使用Hybrid风格的键盘布局</h2><p>此前一直对vim有所排斥，因为需要不停地切换模式，用vim感觉不像是在写代码而是在打指令。Emacs的编辑模式混合了命令和编辑，有更加沉浸的体验。但是vim的一些命令显然更加的快捷且强大。而Spacemacs中有三种键盘布局（编辑风格）——Vim、Emacs和Hybrid，我对Spacemacs的设想是默认的编辑状态为Emacs，按<code>ESC</code>或<code>C-[</code>可以切换到Vim的命令模式，而Hybrid正好混合了Vim和Emacs，并且可以由你自己选择是更像Emacs还是Vim。这自然是追求编辑速度的不二之选。</p>
+<p>将.spacemacs文件中的<code>dotspacemacs-editing-style</code>的值改为<code>hybrid</code>，再在<br><code>dotspacemacs/user-config</code>下添加<code>(evil-default-state &#39;emacs)</code>即可实现上面的编辑风格。Spacemacs文档中的<code>hybrid-mode-default-state</code>不知为何修改了并没有效果。而添加<code>(evil-default-state &#39;emacs)</code>也带来了一个问题，就是第一次打开一个文件是不能用<code>C-[</code>切换为Vim的命令模式，而是要用<code>C-z</code>，而切换了一次之后<code>C-[</code>有可以使用了而<code>C-z</code>会暂时最小化Spacemacs。</p>
+<p>与此同时，启动Spacemacs直接输入数字就可以进入对应的文件或项目了，这是Hybrid带来的好处。</p>
 <hr>
-<p>Emacs 是一种生活方式。</p>
+<p>Emacs是一种生活方式。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/about/index.html" data-id="ckszg0tdd0001emsbe3yshsq2" class="article-share-link">
+      <a data-url="http://example.com/2021/08/31/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" data-id="ckszg0tdp0009emsbejbjg4qp" class="article-share-link">
         分享
       </a>
       
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Emacs/" rel="tag">Emacs</a></li></ul>
+
     </footer>
 
   </div>
 
   
   
+<nav class="article-nav">
+  
+  
+  <a href="/2021/08/24/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">Spacemacs学习笔记（五）</div>
+  </a>
+  
+</nav>
+
   
 
+  
+  
+  
   
 
 </article>
@@ -88,6 +113,8 @@
       <ul class="list-inline">
   
   <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
   
 </ul>
     </div>
@@ -182,6 +209,23 @@
 
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
 
 
 
