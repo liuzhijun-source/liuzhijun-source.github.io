@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Spacemacs学习笔记（五） |
+    
+    Dexloper
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Spacemacs学习笔记（五）" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  Spacemacs学习笔记（五）
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/08/24/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/" class="article-date">
+  <time datetime="2021-08-24T09:13:59.000Z" itemprop="datePublished">2021-08-24</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h2 id="Spacemacs打开项目"><a href="#Spacemacs打开项目" class="headerlink" title="Spacemacs打开项目"></a>Spacemacs打开项目</h2><p>我们用Emacs打开文件的一般步骤是<code>C-x C-f</code>，然后搜索文件，但是有时候我们需要打开一个项目并预览多个文件。如果要用Spacemacs打开项目，我们只需要在我们要打开的项目目录下新建一个名为<code>.projectile</code>的文件，然后这个文件夹就会被Spacemacs识别为项目了。</p>
+<span id="more"></span>
+
+<h2 id="Emacs在Company中用Tab进行补全"><a href="#Emacs在Company中用Tab进行补全" class="headerlink" title="Emacs在Company中用Tab进行补全"></a>Emacs在Company中用Tab进行补全</h2><p>Company中Tab键默认是用来补全公共的部分，回车才是用来选中当前自动完成列表中的第一项，如果要用Tab补全，我们可以在配置文件中加上以下代码：<br><code>(company-tng-mode 1)</code><br>然后就可以用Tab来补全了。</p>
+<h2 id="Spacemacs关闭自动完成列表"><a href="#Spacemacs关闭自动完成列表" class="headerlink" title="Spacemacs关闭自动完成列表"></a>Spacemacs关闭自动完成列表</h2><p>如果你和我一样用<code>Tab</code>键来选中自动完成列表中的第一个项，而且用的自动完成框架是<code>Company</code>的话，那么通常按下<code>Tab</code>之后完成列表并不会关闭，而如果按回车的话，就会自动新建一个行，这里回车的功能也随着用<code>Tab</code>补全而回归最原本的功能了。按<code>C-g</code>呢？这样的话就会取消这次补全，补全了的字符会被删掉。那补全完了之后到底要怎么关闭自动补全列表呢？答案是按<code>C-z</code>，这个组合键可以直接关闭补全列表。但是感觉不是很方便，而且在写代码的时候按这个有种出戏的感觉。看看以后能不能找到更好的办法吧。</p>
+<h2 id="调整Treemacs的宽度"><a href="#调整Treemacs的宽度" class="headerlink" title="调整Treemacs的宽度"></a>调整Treemacs的宽度</h2><p>我们一般可以使用treemacs来查看当前目录/项目下的文件，同时可以直接使用鼠标拖拽来改变目录树的宽度，但是下次启动的时候宽度又会变成默认的宽度。如果要锁定宽度的话，我们可以输入<br><code>M-x treemacs-toggle-fixed-width</code>进行宽度锁定，如果要解锁的话，则再次输入<code>M-x treemacs-toggle-fixed-width</code>就可以了。</p>
+<h2 id="Spacemacs中切换窗口"><a href="#Spacemacs中切换窗口" class="headerlink" title="Spacemacs中切换窗口"></a>Spacemacs中切换窗口</h2><p>在Spacemacs中如果分了多个屏，需要切换窗口的话，可以输入<code>SPC number</code>，<br>在Spacemacs中的emacs模式中<code>SPC</code>就是<code>M-m</code>其中number是窗口的序号。在Spacemacs中，<br>我们可以看到当前窗口的左下角有一个数字，这个数字就是当前窗口的序号。而如果开起了treemacs目录树<br>的话，我们可以发现在目录树的左下角并没有数字，不过，我们只要输入<code>SPC 0</code>就可以切换到目录树了。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/08/24/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/" data-id="ckt4j93ee00074nsb09e27v55" class="article-share-link">
+        分享
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Emacs/" rel="tag">Emacs</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/08/31/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      Spacemacs学习笔记（六）
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2021/08/21/Spacemace%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">Spacemace学习笔记（四）</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Dexloper &copy; 2021</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Dexloper"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

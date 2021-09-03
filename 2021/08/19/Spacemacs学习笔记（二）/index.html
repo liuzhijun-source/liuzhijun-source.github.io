@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Spacemacs学习笔记（二） |
+    
+    Dexloper
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Spacemacs学习笔记（二）" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  Spacemacs学习笔记（二）
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/08/19/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
+  <time datetime="2021-08-19T09:31:22.000Z" itemprop="datePublished">2021-08-19</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h2 id="用eww浏览网页"><a href="#用eww浏览网页" class="headerlink" title="用eww浏览网页"></a>用eww浏览网页</h2><p>以前学习，看网上的文档时一边要开个emacs，另一边又要开一个浏览器，很不方便。而且我希望大多数事情都可以在emacs里面完成，所以想在emacs里面浏览网页，而emacs就自带了一个浏览器eww可以浏览网页。</p>
+<span id="more"></span>
+
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>输入<code>M-x eww</code>之后就会要求你输入网址，输入正确的网址之后就可以打开网页了，此时用<code>C-x 3</code>左右分屏，可以用<code>C-M-v</code>让另一个屏幕向下翻页，用<code>C-M-V</code>向上翻页，一边写文档一边看资料，简直不要太爽。在使用浏览器的时候可以直接用键盘打开，关闭和浏览网页。如果要返回上一个网页，直接在浏览器中按<code>l</code>就可以了，如果要刷新网页可以按<code>g</code>，访问下一个网页可以按<code>r</code>。</p>
+<h3 id="常用功能列表"><a href="#常用功能列表" class="headerlink" title="常用功能列表"></a>常用功能列表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> M-x eww //进入浏览器</span><br><span class="line">********************************************</span><br><span class="line">     eww浏览器快捷键</span><br><span class="line">********************************************</span><br><span class="line">按键	函数	作用</span><br><span class="line">q	eww-quit	退出eww</span><br><span class="line">g	eww-reload	重载该页面</span><br><span class="line">w	eww-copy-page-url	拷贝当前URL到kill ring</span><br><span class="line">d	eww-download	下载光标所在的URL,下载的目录存在变量`eww-download-directory`中,默认为~/Downloads</span><br><span class="line">l	eww-back-url	回退上一个URL</span><br><span class="line">r	eww-forward-url	前进到下一个URL</span><br><span class="line">H	eww-list-histories	显示浏览历史</span><br><span class="line">b	eww-add-bookmark	加书签</span><br><span class="line">B	eww-list-bookmarks	显示书签列表</span><br><span class="line">&amp;	eww-browse-with-external-browser	使用外部浏览器打开当前浏览的URL,外部浏览器由变量`shr-external-browser`决定</span><br><span class="line">v	eww-view-source	查看页面源代码</span><br><span class="line">C	eww-cookie-list	列示Cookie</span><br><span class="line"> </span><br><span class="line">********************************************</span><br><span class="line"> </span><br><span class="line">2.~/.emacs添加</span><br><span class="line">;;记录打开过的文件</span><br><span class="line">(recentf-mode 1)</span><br><span class="line">(global-set-key (kbd &quot;&lt;f7&gt;&quot;) &#x27;recentf-open-files)</span><br><span class="line"> </span><br><span class="line">;;Ctrl+c, Ctrl+x, Ctrl+v模式</span><br><span class="line">(cua-mode 1)</span><br><span class="line"> </span><br><span class="line">;;M-x: 输入命令补全（很爽)</span><br><span class="line">(icomplete-mode 1)</span><br><span class="line"> </span><br><span class="line">4.快捷键</span><br><span class="line">% + m //查找标记文件</span><br><span class="line">Alt + ! //输入shell命令</span><br><span class="line">C-h m //查看快捷键</span><br><span class="line">C-h e //查看emacs回显</span><br><span class="line">Alt + s o //查找字符,并显示列表(实测只适用Mac OS)</span><br><span class="line">Alt + s h . //查找字符,并高亮显示(实测只适用Mac OS）```</span><br></pre></td></tr></table></figure>
+
+<p>这是来自CSDN大佬<a target="_blank" rel="noopener" href="https://unbroken.blog.csdn.net/"><u><strong>慢慢的燃烧</strong></u></a>的整理，感觉很实用，就搬到了这里，以后要是需要和忘记了一些操作我可以来看看。</p>
+<h3 id="不足之处"><a href="#不足之处" class="headerlink" title="不足之处"></a>不足之处</h3><p>虽然eww很方便，但是还是有很多槽点的。就比如加载不了javascript脚本，而且有一些图片显示不出来，一些格式比如代码也无法正常显示。所以还是希望可以找到一个更好的emacs的浏览器😭</p>
+<h2 id="关于layer的编写"><a href="#关于layer的编写" class="headerlink" title="关于layer的编写"></a>关于layer的编写</h2><p>现在确实会编写一些简单的layer了，但是当一个layer要使用到多个包时，初始化包的函数不知道该怎么命名，唉，还是多看看官方文档吧。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/08/19/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ckt4j93ed00064nsbfajzakq5" class="article-share-link">
+        分享
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Emacs/" rel="tag">Emacs</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/08/20/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      Spacemacs学习笔记（三）
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2021/08/18/Spacemacs%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84layer%EF%BC%9F/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">Spacemacs怎么创建并配置自己的layer？</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Dexloper &copy; 2021</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Dexloper"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
