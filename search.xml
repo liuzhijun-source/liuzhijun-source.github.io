@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Spacemace学习笔记（四）</title>
+    <url>/2021/08/21/Spacemace%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="更方便的卸载包（插件）"><a href="#更方便的卸载包（插件）" class="headerlink" title="更方便的卸载包（插件）"></a>更方便的卸载包（插件）</h2><p>现在才知道，要是卸载（关闭）掉一个layer或者包，只需要这个包的名字从启用的layer列表里面去掉或者从安装的包的列表里面去掉就可以了。那个卸载包的地方应该是用来卸载一些layer中不需要的包的。</p>
+<span id="more"></span>
+
+<h2 id="Spacemacs中打开文件导航栏来查看当前目录文件"><a href="#Spacemacs中打开文件导航栏来查看当前目录文件" class="headerlink" title="Spacemacs中打开文件导航栏来查看当前目录文件"></a>Spacemacs中打开文件导航栏来查看当前目录文件</h2><p>如果要在spacemacs中查看当前目录的文件，只需要输入<code>M-x treemacs</code>就可以了，或者直接输入<code>M-m f t</code>，细细一想，treemacs这个名字很形象生动啊！这里还要提一嘴，在spacemacs中，SPC就是M-m！只不过在vim模式中按SPC，在emacs中按M-m.</p>
+<h2 id="打开代码长度基准线"><a href="#打开代码长度基准线" class="headerlink" title="打开代码长度基准线"></a>打开代码长度基准线</h2><p>如果要在编辑器的右侧显示一条位于第80个字符的竖线，来提醒自己单行代码长度不要超过这条线的话，需要执行<code>M-m t f</code>或者<code>spacemacs/toggle-fill-column-indicatore</code>，这样就可以显示了，不过我还不知道要怎样在spacemacs启动的时候开启这个功能。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs学习笔记（一）</title>
+    <url>/2021/08/18/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="Spacemacs启动全屏"><a href="#Spacemacs启动全屏" class="headerlink" title="Spacemacs启动全屏"></a>Spacemacs启动全屏</h2><p>以前一直嫌emacs启动时太小了，而且对窗口大小的更改还不会保存。解决这个最好的方法就是在直接让emacs启动时自动全屏显示。</p>
+<span id="more"></span>
+<p>在spacemacs中如果要自动全屏显示的话，直接在.spacemacs中找到dotspacemacs-maximized-at-startup，然后把后面的值设置为t就好了，如果字太多不好找的话，可以回到文件开头按C-s进行搜索。</p>
+<h2 id="Spacamacs安装和卸载包"><a href="#Spacamacs安装和卸载包" class="headerlink" title="Spacamacs安装和卸载包"></a>Spacamacs安装和卸载包</h2><p>一些自带的包可以在dotspacemacs-configuration-layers中找到，如果要安装的话，去掉注释就可以了。如果要按转更多的包，可以到dotspacemacs-additional-packages那里，把要安装的包填到括号中去，如果要卸载的话，直接到dotspacemacs-excluded-packages那里，把要卸载的包填到括号里就可以了</p>
+<h2 id="Spacemacs编写HTML、Python等编程语言"><a href="#Spacemacs编写HTML、Python等编程语言" class="headerlink" title="Spacemacs编写HTML、Python等编程语言"></a>Spacemacs编写HTML、Python等编程语言</h2><p>这是我心目中spacemacs最好、最方便的功能，如果要添加对某些语言的支持，你只要打开相应的源文件，然后minibuffer就会问你是否要安装相关的支持，直接输入y就会自动给你安装，完全不要你操心，这对我来说真是太友好了，因为就算安装一些language-mode，即使有官方文档，安装也会很麻烦，可能还会碰到bug。</p>
+<p>不过如果要使用这项功能，得先到dotspacemacs-configuration-layers中开启lsp，即把关于lsp的注释去掉。</p>
+<h2 id="用Spacemacs浏览网页"><a href="#用Spacemacs浏览网页" class="headerlink" title="用Spacemacs浏览网页"></a>用Spacemacs浏览网页</h2><p>因为我关于spacemacs知之甚少，我还是用自带的eww浏览网页。可以满足一些日常的文字浏览需求，但是一些图片可能无法显示，javascript脚本也无法运行，以后学的多了就换掉，挺麻烦的。</p>
+<p>eww还是有方便之处的，全屏启动spacemacs之后，可以分另个屏，一边编辑文件，另一边用eww看网页，比再开一个浏览器方便多了，如果要上下翻页的话，可以直接C-M-v和从C-M-V，不需要使用鼠标。</p>
+<h2 id="Spacemacs预览markdown文件"><a href="#Spacemacs预览markdown文件" class="headerlink" title="Spacemacs预览markdown文件"></a>Spacemacs预览markdown文件</h2><p>哈哈，这还是我在编写这篇文章的时候学到的，在编写markdown文件时，输入M-x markdown-live-preview-mode 就会预览自己写的markdown文档。这个命令默认会生成一个html文件，关闭预览之后就会删除，不过要注意的时，只有当你保存当前的.md文件时，预览的内容才会刷新！</p>
+<p>好了，今天就写到这里吧</p>
+<hr>
+<pre><code>                                                   Emacs是一种生活方式
+</code></pre>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs学习笔记（三）</title>
+    <url>/2021/08/20/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="用EAF浏览器浏览网页"><a href="#用EAF浏览器浏览网页" class="headerlink" title="用EAF浏览器浏览网页"></a>用EAF浏览器浏览网页</h2><p>今天逛emacs china时看到一个帖子，里面介绍了eaf，安装完这个插件之后可以运行功能完善的浏览器，pdf阅读器，终端模拟器，文件资源管理器等，而且浏览器还使用了chromium，这个比eww好用多了。</p>
+<span id="more"></span>
+<p>具体的安装方法大家可以到github上面搜一下，使用pyqt开发，所以支持Windows、macOS、Linux三大平台。这是一个emacs上的应用程序框架，理论上可以运行所有桌面程序。用了eaf内置的浏览器之后，渲染出的网页基本和Google Chrome、Firefox、Microsoft Edge等浏览器没有区别，github上面有中文文档，大家可以去看看。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs学习笔记（二）</title>
+    <url>/2021/08/19/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="用eww浏览网页"><a href="#用eww浏览网页" class="headerlink" title="用eww浏览网页"></a>用eww浏览网页</h2><p>以前学习，看网上的文档时一边要开个emacs，另一边又要开一个浏览器，很不方便。而且我希望大多数事情都可以在emacs里面完成，所以想在emacs里面浏览网页，而emacs就自带了一个浏览器eww可以浏览网页。</p>
+<span id="more"></span>
+
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>输入<code>M-x eww</code>之后就会要求你输入网址，输入正确的网址之后就可以打开网页了，此时用<code>C-x 3</code>左右分屏，可以用<code>C-M-v</code>让另一个屏幕向下翻页，用<code>C-M-V</code>向上翻页，一边写文档一边看资料，简直不要太爽。在使用浏览器的时候可以直接用键盘打开，关闭和浏览网页。如果要返回上一个网页，直接在浏览器中按<code>l</code>就可以了，如果要刷新网页可以按<code>g</code>，访问下一个网页可以按<code>r</code>。</p>
+<h3 id="常用功能列表"><a href="#常用功能列表" class="headerlink" title="常用功能列表"></a>常用功能列表</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> M-x eww //进入浏览器</span><br><span class="line">********************************************</span><br><span class="line">     eww浏览器快捷键</span><br><span class="line">********************************************</span><br><span class="line">按键	函数	作用</span><br><span class="line">q	eww-quit	退出eww</span><br><span class="line">g	eww-reload	重载该页面</span><br><span class="line">w	eww-copy-page-url	拷贝当前URL到kill ring</span><br><span class="line">d	eww-download	下载光标所在的URL,下载的目录存在变量`eww-download-directory`中,默认为~/Downloads</span><br><span class="line">l	eww-back-url	回退上一个URL</span><br><span class="line">r	eww-forward-url	前进到下一个URL</span><br><span class="line">H	eww-list-histories	显示浏览历史</span><br><span class="line">b	eww-add-bookmark	加书签</span><br><span class="line">B	eww-list-bookmarks	显示书签列表</span><br><span class="line">&amp;	eww-browse-with-external-browser	使用外部浏览器打开当前浏览的URL,外部浏览器由变量`shr-external-browser`决定</span><br><span class="line">v	eww-view-source	查看页面源代码</span><br><span class="line">C	eww-cookie-list	列示Cookie</span><br><span class="line"> </span><br><span class="line">********************************************</span><br><span class="line"> </span><br><span class="line">2.~/.emacs添加</span><br><span class="line">;;记录打开过的文件</span><br><span class="line">(recentf-mode 1)</span><br><span class="line">(global-set-key (kbd &quot;&lt;f7&gt;&quot;) &#x27;recentf-open-files)</span><br><span class="line"> </span><br><span class="line">;;Ctrl+c, Ctrl+x, Ctrl+v模式</span><br><span class="line">(cua-mode 1)</span><br><span class="line"> </span><br><span class="line">;;M-x: 输入命令补全（很爽)</span><br><span class="line">(icomplete-mode 1)</span><br><span class="line"> </span><br><span class="line">4.快捷键</span><br><span class="line">% + m //查找标记文件</span><br><span class="line">Alt + ! //输入shell命令</span><br><span class="line">C-h m //查看快捷键</span><br><span class="line">C-h e //查看emacs回显</span><br><span class="line">Alt + s o //查找字符,并显示列表(实测只适用Mac OS)</span><br><span class="line">Alt + s h . //查找字符,并高亮显示(实测只适用Mac OS）```</span><br></pre></td></tr></table></figure>
+
+<p>这是来自CSDN大佬<a href="https://unbroken.blog.csdn.net/"><u><strong>慢慢的燃烧</strong></u></a>的整理，感觉很实用，就搬到了这里，以后要是需要和忘记了一些操作我可以来看看。</p>
+<h3 id="不足之处"><a href="#不足之处" class="headerlink" title="不足之处"></a>不足之处</h3><p>虽然eww很方便，但是还是有很多槽点的。就比如加载不了javascript脚本，而且有一些图片显示不出来，一些格式比如代码也无法正常显示。所以还是希望可以找到一个更好的emacs的浏览器😭</p>
+<h2 id="关于layer的编写"><a href="#关于layer的编写" class="headerlink" title="关于layer的编写"></a>关于layer的编写</h2><p>现在确实会编写一些简单的layer了，但是当一个layer要使用到多个包时，初始化包的函数不知道该怎么命名，唉，还是多看看官方文档吧。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs学习笔记（五）</title>
+    <url>/2021/08/24/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="Spacemacs打开项目"><a href="#Spacemacs打开项目" class="headerlink" title="Spacemacs打开项目"></a>Spacemacs打开项目</h2><p>我们用Emacs打开文件的一般步骤是<code>C-x C-f</code>，然后搜索文件，但是有时候我们需要打开一个项目并预览多个文件。如果要用Spacemacs打开项目，我们只需要在我们要打开的项目目录下新建一个名为<code>.projectile</code>的文件，然后这个文件夹就会被Spacemacs识别为项目了。</p>
+<span id="more"></span>
+
+<h2 id="Emacs在Company中用Tab进行补全"><a href="#Emacs在Company中用Tab进行补全" class="headerlink" title="Emacs在Company中用Tab进行补全"></a>Emacs在Company中用Tab进行补全</h2><p>Company中Tab键默认是用来补全公共的部分，回车才是用来选中当前自动完成列表中的第一项，如果要用Tab补全，我们可以在配置文件中加上以下代码：<br><code>(company-tng-mode 1)</code><br>然后就可以用Tab来补全了。</p>
+<h2 id="Spacemacs关闭自动完成列表"><a href="#Spacemacs关闭自动完成列表" class="headerlink" title="Spacemacs关闭自动完成列表"></a>Spacemacs关闭自动完成列表</h2><p>如果你和我一样用<code>Tab</code>键来选中自动完成列表中的第一个项，而且用的自动完成框架是<code>Company</code>的话，那么通常按下<code>Tab</code>之后完成列表并不会关闭，而如果按回车的话，就会自动新建一个行，这里回车的功能也随着用<code>Tab</code>补全而回归最原本的功能了。按<code>C-g</code>呢？这样的话就会取消这次补全，补全了的字符会被删掉。那补全完了之后到底要怎么关闭自动补全列表呢？答案是按<code>C-z</code>，这个组合键可以直接关闭补全列表。但是感觉不是很方便，而且在写代码的时候按这个有种出戏的感觉。看看以后能不能找到更好的办法吧。</p>
+<h2 id="调整Treemacs的宽度"><a href="#调整Treemacs的宽度" class="headerlink" title="调整Treemacs的宽度"></a>调整Treemacs的宽度</h2><p>我们一般可以使用treemacs来查看当前目录/项目下的文件，同时可以直接使用鼠标拖拽来改变目录树的宽度，但是下次启动的时候宽度又会变成默认的宽度。如果要锁定宽度的话，我们可以输入<br><code>M-x treemacs-toggle-fixed-width</code>进行宽度锁定，如果要解锁的话，则再次输入<code>M-x treemacs-toggle-fixed-width</code>就可以了。</p>
+<h2 id="Spacemacs中切换窗口"><a href="#Spacemacs中切换窗口" class="headerlink" title="Spacemacs中切换窗口"></a>Spacemacs中切换窗口</h2><p>在Spacemacs中如果分了多个屏，需要切换窗口的话，可以输入<code>SPC number</code>，<br>在Spacemacs中的emacs模式中<code>SPC</code>就是<code>M-m</code>其中number是窗口的序号。在Spacemacs中，<br>我们可以看到当前窗口的左下角有一个数字，这个数字就是当前窗口的序号。而如果开起了treemacs目录树<br>的话，我们可以发现在目录树的左下角并没有数字，不过，我们只要输入<code>SPC 0</code>就可以切换到目录树了。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs学习笔记（六）</title>
+    <url>/2021/08/31/Spacemacs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="使用Hybrid风格的键盘布局"><a href="#使用Hybrid风格的键盘布局" class="headerlink" title="使用Hybrid风格的键盘布局"></a>使用Hybrid风格的键盘布局</h2><p>此前一直对vim有所排斥，因为需要不停地切换模式，用vim感觉不像是在写代码而是在打指令。Emacs的编辑模式混合了命令和编辑，有更加沉浸的体验。但是vim的一些命令显然更加的快捷且强大。而Spacemacs中有三种键盘布局（编辑风格）——Vim、Emacs和Hybrid，我对Spacemacs的设想是默认的编辑状态为Emacs，按<code>ESC</code>或<code>C-[</code>可以切换到Vim的命令模式，而Hybrid正好混合了Vim和Emacs，并且可以由你自己选择是更像Emacs还是Vim。这自然是追求编辑速度的不二之选。</p>
+<p>将.spacemacs文件中的<code>dotspacemacs-editing-style</code>的值改为<code>hybrid</code>，再在<br><code>dotspacemacs/user-config</code>下添加<code>(evil-default-state &#39;emacs)</code>即可实现上面的编辑风格。Spacemacs文档中的<code>hybrid-mode-default-state</code>不知为何修改了并没有效果。而添加<code>(evil-default-state &#39;emacs)</code>也带来了一个问题，就是第一次打开一个文件是不能用<code>C-[</code>切换为Vim的命令模式，而是要用<code>C-z</code>，而切换了一次之后<code>C-[</code>有可以使用了而<code>C-z</code>会暂时最小化Spacemacs。</p>
+<p>与此同时，启动Spacemacs直接输入数字就可以进入对应的文件或项目了，这是Hybrid带来的好处。</p>
+<hr>
+<p>Emacs是一种生活方式。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spacemacs怎么创建并配置自己的layer？</title>
+    <url>/2021/08/18/Spacemacs%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84layer%EF%BC%9F/</url>
+    <content><![CDATA[<p>Spacemacs默认提供了很多实用的layer，但是也有一些layer并不提供，而我们如果想使用一些包的功能，又想把它写进一个layer里面来避免配置文件杂乱的话，可以试着自己创建一个layer</p>
+<span id="more"></span>
+
+<p>声明：这只是创建layer的入门配置！并不会特别的深入，如果要进一步了解，可以查看<a href="https://www.spacemacs.org/doc/DOCUMENTATION.html" title="Spacemacs官方文档">Spacemacs官方文档</a>！</p>
+<p>首先打开emacs，我们可以通过输入<code>m-x configuration-layer/create-layer</code>来创建一个layer，执行这个命令之后通常会先让你选择路径，如果选择默认的private的话，这将会是你的死人的layer，不会被上传到spacemacs中的github仓库，而如果你想让自己的layer上传到github仓库中去来为spacemacs做出自己的贡献的话，可以<a href="https://www.spacemacs.org/doc/documentation.html#types-of-configuration-layers" title="spacemacs中layer的类型">点击这里</a>进行了解，这里我们选择private。</p>
+<p>选择路径之后会要求你输入名字，输入一个自己喜欢或容易记住的名字就可以了，最好不要是某个包的名字。输入完名字之后会问你是否要添加readme文件，如果你会把自己的配置放到网上分享给别人的话，你可以添加，也可以选择不添加。接下来开始编写配置</p>
+<p>我这里以一个名叫posframe的layer举例。目的是为了使用ivy-posframe来居中显示minibuffer的一些界面，但是因为要使用到ivy-posframe这个包，所以图方便直接就叫ivy-posframe了。</p>
+<p>此时，默认应该会跳转到package.el这个文件，我这里因为名字是posframe，所以这个文件的路径是~/.emacs.d/private/posframe/package.el，我们就在这个文件中编写我们的layer。下面以我的视角为例，来编写layer.</p>
+<p>此时映入眼帘的一个语句是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(defconst posframe-packages</span><br><span class="line">  &#x27;()</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<p>注：这行代码下面可能会有注释</p>
+<p>我们在<code>&#39;()</code>的()中填写这个layer需要的包，例如我需要ivy-posframe这个包，我就这样写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(defconst posframe-packages</span><br><span class="line">  &#x27;(ivy-posframe)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+
+<p>然后我们在在最底下开始配置我们的layer，首先声明一下，请把下面的layername替换成你自己的layer的名字，把init-packagename中的packagename替换成你自己需要的包的名字。</p>
+<p>格式大概如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(defun layername/init-packagename ()</span><br><span class="line">   ;;your code.)</span><br></pre></td></tr></table></figure>
+
+<p>那么如果我要添加ivy-posframe这个包，并使用use-package来安装和配置他，我就应该这样写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(defun posframe/init-ivy-posframe ()</span><br><span class="line">    (use-package ivy-posframe</span><br><span class="line">      :init</span><br><span class="line">      (setq ivy-posframe-display-functions-alist</span><br><span class="line">            &#x27;((swiper             . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (complete-symbol    . ivy-posframe-display-at-point)</span><br><span class="line">              (counsel-m-x        . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (counsel-find-file  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (ivy-switch-buffer  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (t                  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              )))</span><br><span class="line">    (ivy-posframe-mode 1))</span><br></pre></td></tr></table></figure>
+
+<p>注意layername和init-packagename中的packagename，我换成了我需要的posframe和ivy-posframe包，然后下面就是我们的配置，关于你需要的包的配置你通常可以在包的官网找到，或者上网搜索一下，我这里只是举个例子。大哥的格式就是这样，<code>defun posframe/init-ivy-posframe ()</code>下面就是你对这个layer的配置</p>
+<p>配置完你的layer之后，到你的.spacemacs文件中去，找到<code>dotspacemacs-configuration-layers</code>，然后再下面加上你的layer的名字，最后再重启spacemacs，这个layer应该就会生效了，至此，你已经成创建了一个你自己的layer！</p>
+<p>我们只是对spacemacs的layer进行了一些简单的配置，但是关于layer，还有很多复杂繁琐的东西，其中还有更加广阔的天地，我就不在这里一一解释了。读者可以查看<a href="https://www.spacemacs.org/doc/DOCUMENTATION.html" title="Spacemacs官方文档">Spacemacs官方文档</a>。</p>
+<hr>
+<p>Emacs是一种生活方式</p>
+]]></content>
+  </entry>
+</search>
