@@ -116,13 +116,12 @@
 <p>我们在<code>&#39;()</code>的()中填写这个layer需要的包，例如我需要ivy-posframe这个包，我就这样写</p>
 <figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">defconst</span> posframe-packages</span><br><span class="line">  &#x27;(ivy-posframe)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
 
-
 <p>然后我们在在最底下开始配置我们的layer，首先声明一下，请把下面的layername替换成你自己的layer的名字，把init-packagename中的packagename替换成你自己需要的包的名字。</p>
 <p>格式大概如下:</p>
 <figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">defun</span> layername/init-packagename ()</span><br><span class="line">   <span class="comment">;;your code.)</span></span><br></pre></td></tr></table></figure>
 
 <p>那么如果我要添加ivy-posframe这个包，并使用use-package来安装和配置他，我就应该这样写</p>
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">defun</span> posframe/init-ivy-posframe ()</span><br><span class="line">    (<span class="name">use-package</span> ivy-posframe</span><br><span class="line">      <span class="symbol">:init</span></span><br><span class="line">      (<span class="name">setq</span> ivy-posframe-display-functions-alist</span><br><span class="line">            &#x27;((swiper             . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (complete-symbol    . ivy-posframe-display-at-point)</span><br><span class="line">              (counsel-m-x        . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (counsel-find-file  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (ivy-switch-buffer  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (<span class="literal">t</span>                  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              )))</span><br><span class="line">    (<span class="name">ivy-posframe-mode</span> <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">defun</span> posframe/init-ivy-posframe ()</span><br><span class="line">    (<span class="name">use-package</span> ivy-posframe</span><br><span class="line">      <span class="symbol">:init</span></span><br><span class="line">      (<span class="name">setq</span> ivy-posframe-display-functions-alist</span><br><span class="line">            &#x27;((swiper             . ivy-posframe-display-at-frame-center)</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">              (complete-symbol    . ivy-posframe-display-at-point)</span><br><span class="line">              (counsel-m-x        . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (counsel-find-file  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (ivy-switch-buffer  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              (<span class="literal">t</span>                  . ivy-posframe-display-at-frame-center)</span><br><span class="line">              )))</span><br><span class="line">    (<span class="name">ivy-posframe-mode</span> <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 
 <p>注意layername和init-packagename中的packagename，我换成了我需要的posframe和ivy-posframe包，然后下面就是我们的配置，关于你需要的包的配置你通常可以在包的官网找到，或者上网搜索一下，我这里只是举个例子。大哥的格式就是这样，<code>defun posframe/init-ivy-posframe ()</code>下面就是你对这个layer的配置</p>
 <p>配置完你的layer之后，到你的.spacemacs文件中去，找到<code>dotspacemacs-configuration-layers</code>，然后再下面加上你的layer的名字，最后再重启spacemacs，这个layer应该就会生效了，至此，你已经成创建了一个你自己的layer！</p>
@@ -150,5 +149,22 @@
       <categories>
         <category>Typora</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Spacemacs 14 Days - 一个 Spacemacs 入门教程</title>
+    <url>/2021/10/10/Spacemacs%2014%20Days%20-%20%E4%B8%80%E4%B8%AA%20Spacemacs%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>The best editor is neither Emacs nor Vim, it’s Emacs <strong>and</strong> Vim!<br/><br>最好的编辑器不是 Emacs 或 Vim，而是 Emacs <strong>和</strong> Vim！</p>
+</blockquote>
+<p>Spacemacs 14 Days —— 学习更加强大的编辑器</p>
+<p>Emacs 是一种生活方式。</p>
+<p>Spacemacs 14 Days 是一个 Spacemacs 入门教程，观看本教程前的前提是已经会使用 Emacs 的基本操作。</p>
+<ul>
+<li>GitHub 项目地址: <a href="https://github.com/liuzhijun-source/spacemacs-14-days">https://github.com/liuzhijun-source/spacemacs-14-days</a></li>
+<li>Gitee 镜像地址: <a href="https://gitee.com/liuzhijun-source/spacemacs-14-days">https://gitee.com/liuzhijun-source/spacemacs-14-days</a></li>
+<li>GitHub Page: <a href="https://liuzhijun-source.github.io/spacemacs-14-days">https://liuzhijun-source.github.io/spacemacs-14-days</a></li>
+</ul>
+<p>如有错误，欢迎指出，不胜感激</p>
+]]></content>
   </entry>
 </search>
