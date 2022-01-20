@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"liuzhijun-source.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","width":220,"display":"hide","padding":16,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="引言如果你想在输入文字时畅快地输入 Emoji 表情，那么 Rime 输入法是一个不错的选择，配置后之后，它对 Emoji 表情输入法有着很好的支持，但是官方的 Emoji 方案配置教程却有点令人费解，所以，寫下這篇教程來一解 Emoji 輸入之痛！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rime 添加 Emoji 输入方案教程">
+<meta property="og:url" content="https://liuzhijun-source.github.io/2022/01/01/Rime%E6%B7%BB%E5%8A%A0Emoji%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">
+<meta property="og:site_name" content="刘志军的个人站点">
+<meta property="og:description" content="引言如果你想在输入文字时畅快地输入 Emoji 表情，那么 Rime 输入法是一个不错的选择，配置后之后，它对 Emoji 表情输入法有着很好的支持，但是官方的 Emoji 方案配置教程却有点令人费解，所以，寫下這篇教程來一解 Emoji 輸入之痛！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f1451a739fc748d7bfe739feb0cb0b5c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA4oWg5Y-q5bCP54yr,size_13,color_FFFFFF,t_70,g_se,x_16">
+<meta property="article:published_time" content="2022-01-01T13:21:40.000Z">
+<meta property="article:modified_time" content="2022-01-20T10:27:59.483Z">
+<meta property="article:author" content="刘志军">
+<meta property="article:tag" content="刘志军">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/f1451a739fc748d7bfe739feb0cb0b5c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA4oWg5Y-q5bCP54yr,size_13,color_FFFFFF,t_70,g_se,x_16">
+
+
+<link rel="canonical" href="https://liuzhijun-source.github.io/2022/01/01/Rime%E6%B7%BB%E5%8A%A0Emoji%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://liuzhijun-source.github.io/2022/01/01/Rime%E6%B7%BB%E5%8A%A0Emoji%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/","path":"2022/01/01/Rime添加Emoji输入方案/","title":"Rime 添加 Emoji 输入方案教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Rime 添加 Emoji 输入方案教程 | 刘志军的个人站点</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">刘志军的个人站点</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">刘志军写字的地方</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">刘志军</p>
+  <div class="site-description" itemprop="description">刘志军的博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://liuzhijun-source.github.io/2022/01/01/Rime%E6%B7%BB%E5%8A%A0Emoji%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="刘志军">
+      <meta itemprop="description" content="刘志军的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘志军的个人站点">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Rime 添加 Emoji 输入方案教程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-01-01 21:21:40" itemprop="dateCreated datePublished" datetime="2022-01-01T21:21:40+08:00">2022-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-01-20 18:27:59" itemprop="dateModified" datetime="2022-01-20T18:27:59+08:00">2022-01-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BE%93%E5%85%A5%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">输入法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>如果你想在输入文字时畅快地输入 Emoji 表情，那么 Rime 输入法是一个不错的选择，配置后之后，它对 Emoji 表情输入法有着很好的支持，但是官方的 Emoji 方案<a target="_blank" rel="noopener" href="https://github.com/rime/rime-emoji">配置教程</a>却有点令人费解，所以，寫下這篇教程來<strong>一解 Emoji 輸入之痛！</strong></p>
+<span id="more"></span>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>rime-emoji 的<a target="_blank" rel="noopener" href="https://github.com/rime/rime-emoji">仓库</a>提供了使用东风破 (plum) 自动安装 Emoji 输入方案的教程，但是对于如何安装东风破却含糊其辞，因此我们采用手动安装的方法</p>
+<p>首先将 rime-emoji 的仓库克隆到本地</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/rime/rime-emoji</span></span><br></pre></td></tr></table></figure>
+
+<p>克隆完成后，我们来看看这个仓库的 README 文件</p>
+<blockquote>
+<ol>
+<li>下載<code>opencc</code>檔案夾內容，將完整檔案夾放入Rime用戶檔案夾內</li>
+<li>將<code>emoji_suggestion.yaml</code>內的內容加入至想添加Emoji的方案custom檔中</li>
+</ol>
+</blockquote>
+<p>我来翻译一下：</p>
+<ol>
+<li>将 <code>opencc</code> <strong>文件夹里</strong>的内容放到你的 Rime 输入法用户文件夹中</li>
+<li>将 <code>emoji_suggestion.yaml</code> 里的内容添加到你想要使用 Emoji 方案的输入方案配置文件中</li>
+</ol>
+<p>我们可以看到，opencc 文件夹内有这些内容 <code>emoji_category.txt</code>、<code>emoji.json</code>、<code>emoji_word.txt</code></p>
+<p>如果你使用 Linux 系统，并且使用 Fcitx5 输入法的话，就需要把这三个文件移到你的 Rime 配置文件夹中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv opencc/* ~/.local/share/fcitx5/rime</span><br></pre></td></tr></table></figure>
+
+<p>Windows、macOS 系统同样是进行与上述类似的操作，不过 Rime 的用户配置文件夹不同，需要进行更改</p>
+<p>接下来把 <code>emoji_suggestion.yaml</code> 里的内容添加到想要使用 Emoji 方案的输入方案配置文件中，我希望明月拼音可以使用 Emoji 输入方案，那直接把这个文件里的内容复制到明月拼音的配置文件底部就行了，完成后文件内容应该如下所示</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line">  <span class="comment"># 你的配置内容</span></span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line">  <span class="string">switches/@next:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">emoji_suggestion</span></span><br><span class="line">    <span class="attr">reset:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">states:</span> [ <span class="string">&quot;🈚️️\uFE0E&quot;</span>, <span class="string">&quot;🈶️️\uFE0F&quot;</span> ]</span><br><span class="line">  <span class="string">&#x27;engine/filters/@before 0&#x27;</span><span class="string">:</span></span><br><span class="line">    <span class="string">simplifier@emoji_suggestion</span></span><br><span class="line">  <span class="attr">emoji_suggestion:</span></span><br><span class="line">    <span class="attr">opencc_config:</span> <span class="string">emoji.json</span></span><br><span class="line">    <span class="attr">option_name:</span> <span class="string">emoji_suggestion</span></span><br><span class="line">    <span class="attr">tips:</span> <span class="string">all</span></span><br></pre></td></tr></table></figure>
+
+<p>到这里就差不多结束了，不过，如果你使用的是 Linux 发行版的话，可能还需要安装一个包和 Emoji 字体（如果已经安装了 Emoji 字体就不需要安装了）。<strong>安装包的命令和包名依据你使用的 Linux 发行版而定，这里使用 Arch Linux 演示！</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S rime-emoji noto-fonts-emoji</span><br></pre></td></tr></table></figure>
+
+<p>最后重新部署一下 Rime 输入法，就可以输入 Emoji 了！<br><img src="https://img-blog.csdnimg.cn/f1451a739fc748d7bfe739feb0cb0b5c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA4oWg5Y-q5bCP54yr,size_13,color_FFFFFF,t_70,g_se,x_16" alt="Emoji 输入演示图片"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/" rel="prev" title="Aria2 安装和使用全教程">
+                  <i class="fa fa-chevron-left"></i> Aria2 安装和使用全教程
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘志军</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
