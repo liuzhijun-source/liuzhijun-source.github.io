@@ -22,7 +22,7 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuzhijun-source.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","width":220,"display":"hide","padding":16,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="Aria2介绍Aria2是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2拥有众多的———没错，缺点！！！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，盖提亚，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用Aria2的人，我还是出一期教程吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aria2 安装和使用全教程">
+<meta property="og:title" content="Aria2 安装和使用教程">
 <meta property="og:url" content="https://liuzhijun-source.github.io/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">
 <meta property="og:site_name" content="刘志军的个人站点">
 <meta property="og:description" content="Aria2介绍Aria2是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2拥有众多的———没错，缺点！！！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，盖提亚，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用Aria2的人，我还是出一期教程吧。">
@@ -41,9 +41,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210410133356548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021041013351176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-10T05:42:25.000Z">
-<meta property="article:modified_time" content="2022-01-20T10:27:37.167Z">
+<meta property="article:modified_time" content="2022-01-21T09:01:34.723Z">
 <meta property="article:author" content="刘志军">
-<meta property="article:tag" content="刘志军">
+<meta property="article:tag" content="Aria2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210410124838674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 
@@ -52,10 +52,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://liuzhijun-source.github.io/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/","path":"2021/04/10/Aria2 安装和使用全教程/","title":"Aria2 安装和使用全教程"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://liuzhijun-source.github.io/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/","path":"2021/04/10/Aria2 安装和使用全教程/","title":"Aria2 安装和使用教程"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Aria2 安装和使用全教程 | 刘志军的个人站点</title>
+<title>Aria2 安装和使用教程 | 刘志军的个人站点</title>
   
 
 
@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -159,7 +159,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Aria2 安装和使用全教程
+          Aria2 安装和使用教程
         </h1>
 
         <div class="post-meta-container">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-20 18:27:37" itemprop="dateModified" datetime="2022-01-20T18:27:37+08:00">2022-01-20</time>
+      <time title="修改时间：2022-01-21 17:01:34" itemprop="dateModified" datetime="2022-01-21T17:01:34+08:00">2022-01-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,7 +269,7 @@
 <p>接下来，我们可以尝试使用一些更为方便好用的Web控制端。</p>
 <h2 id="AriaNg"><a href="#AriaNg" class="headerlink" title="AriaNg"></a>AriaNg</h2><p>打开<a target="_blank" rel="noopener" href="https://github.com/mayswind/AriaNg/releases">这个页面</a>，点击下载列表中的“AriaNg-1.2.1-AllInOne.zip”进行下载，打开下载完的压缩包，我们可以看到里面有一个名为“index.html”的文件，双击它，可以看到以下画面<br><img src="https://img-blog.csdnimg.cn/20210410133114852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>很漂亮有没有？他的操作方法与之前使用的Web控制端大同小异，而且功能还更多，大家可以自己去探索</p>
 <h2 id="Aria2扩展"><a href="#Aria2扩展" class="headerlink" title="Aria2扩展"></a>Aria2扩展</h2><p>每次要用Aria2下载文件的时候，总是要复制下载链接，然后粘贴到别的地方才能进行下载，使用浏览器扩展，可以很方便的解决这个问题。进入浏览器自带的扩展商店，搜索aria2，一般可以看到这个扩展<br><img src="https://img-blog.csdnimg.cn/20210410133356548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装他之后，进行一些简单的配置，就可以实现“右键导出下载”，“自动拦截下载任务”等功能了，这里就不过多赘述了<br><img src="https://img-blog.csdnimg.cn/2021041013351176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看到，功能还是很多的。<br>不过，这个一切的大前提是，aria2.exe保持打开状态，如果一不小心手贱关掉了，就不能正常使用Web控制端了，需要重新打开</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>完..</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>完……</p>
 
     </div>
 
@@ -278,6 +278,26 @@
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>刘志军
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://liuzhijun-source.github.io/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/" title="Aria2 安装和使用教程">https://liuzhijun-source.github.io/2021/04/10/Aria2 安装和使用全教程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Aria2/" rel="tag"># Aria2</a>
+          </div>
 
         
 
