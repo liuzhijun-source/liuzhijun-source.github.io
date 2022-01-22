@@ -28,7 +28,7 @@
 <meta property="og:description" content="安装因为使用的是 ArchLinux，也知道小鹤音形的英文名称是「flypy」，所以我直接从 AUR 安装了 Rime 小鹤音形的输入方案 1$ sudo yay -S rime-flypy  但我一直为它的词库太小所苦恼，而且一些拼音词库添加后也并没有效果，添加后甚至还会打不出字。后来上 Rime 输入法的官网了解后才知道 Rime 官方支持的双拼输入方案的包是 rime-double-piny">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-21T09:50:04.000Z">
-<meta property="article:modified_time" content="2022-01-21T10:23:02.574Z">
+<meta property="article:modified_time" content="2022-01-22T10:11:12.066Z">
 <meta property="article:author" content="刘志军">
 <meta property="article:tag" content="Rime">
 <meta property="article:tag" content="小鹤音形">
@@ -122,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E7%B9%81%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">简繁转换</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E7%B9%81%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">简繁转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%80%99%E9%80%89%E8%AF%8D%E4%B8%AA%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">设置候选词个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">添加词库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%8D%E5%BA%93%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.1.</span> <span class="nav-text">词库类型介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.2.</span> <span class="nav-text">添加步骤</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,6 +151,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/liuzhijun-source" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;liuzhijun-source" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Liu-Zhijun@outlook.com" title="E-Mail → mailto:Liu-Zhijun@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -209,9 +217,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-01-21 17:50:04 / 修改时间：18:23:02" itemprop="dateCreated datePublished" datetime="2022-01-21T17:50:04+08:00">2022-01-21</time>
+      <time title="创建时间：2022-01-21 17:50:04" itemprop="dateCreated datePublished" datetime="2022-01-21T17:50:04+08:00">2022-01-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-01-22 18:11:12" itemprop="dateModified" datetime="2022-01-22T18:11:12+08:00">2022-01-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -246,10 +260,51 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">schema:</span></span><br><span class="line">  <span class="attr">author:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;double pinyin layout by 鶴&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;Rime schema by 佛振 &lt;chen.sst@gmail.com&gt;&quot;</span></span><br><span class="line">  <span class="attr">dependencies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">stroke</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">|</span></span><br><span class="line"><span class="string">    朙月拼音＋小鶴雙拼方案。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;小鶴雙拼&quot;</span></span><br><span class="line">  <span class="attr">schema_id:</span> <span class="string">double_pinyin_flypy</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">0.18</span></span><br></pre></td></tr></table></figure>
 
 <p>注意到上面的朙月拼音了吗？原来它本质上是朙月拼音，也难怪上屏的字母是拼音的格式，不过也没有什么大碍，毕竟拼音更直观。同时，使用后，还可以发现 Rime 的用户目录下生成了 <code>luna_pinyn.userdb</code> 文件，这说明它使用了 luna_pinyin 的词库，以此来解决了小鹤音形词库小的问题。</p>
-<h2 id="简繁转换"><a href="#简繁转换" class="headerlink" title="简繁转换"></a>简繁转换</h2><p>到目前为止，小鹤音形已经可以正常使用了，但是我们会发现它默认输入的是繁体中文，如果要输入简体中文的话只需要按 <kbd>F4</kbd> 就可以了，但是每次都按无疑是很麻烦的，将下面的代码添加到 <code>double_pinyin_flypy.custom.yaml</code> 来让它默认输出中文：</p>
+<h2 id="简繁转换"><a href="#简繁转换" class="headerlink" title="简繁转换"></a>简繁转换</h2><p>到目前为止，小鹤音形已经可以正常使用了，但是我们会发现它默认输入的是繁体中文，如果要输入简体中文的话只需要按<kbd>F4</kbd> 就可以了，但是每次都按无疑是很麻烦的，将下面的代码添加到 <code>double_pinyin_flypy.custom.yaml</code> 来让它默认输出中文：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line">  <span class="attr">switches:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ascii_mode</span></span><br><span class="line">      <span class="attr">reset:</span> <span class="number">0</span></span><br><span class="line">      <span class="attr">states:</span> [ <span class="string">中文</span>, <span class="string">西文</span> ]</span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">full_shape</span></span><br><span class="line">      <span class="attr">states:</span> [ <span class="string">半角</span>, <span class="string">全角</span> ]</span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">simplification</span></span><br><span class="line">      <span class="attr">reset:</span> <span class="number">1</span></span><br><span class="line">      <span class="attr">states:</span> [ <span class="string">漢字</span>, <span class="string">汉字</span> ]</span><br></pre></td></tr></table></figure>
 
-<p>重新部署后就可以默认输出简体中文了。现在又可以愉快地使用小鹤音形了，现在我只想说一句：“小鹤音形，真香！”</p>
+<p>重新部署后就可以默认输出简体中文了。</p>
+<h2 id="设置候选词个数"><a href="#设置候选词个数" class="headerlink" title="设置候选词个数"></a>设置候选词个数</h2><p>设置候选词个数并不难，在 <code>default.custom.yaml</code> 或相关输入方案的配置文件中加入下面的内容就可以了：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line">  <span class="attr">&quot;menu/page_size&quot;:</span> <span class="number">5</span>   <span class="string">将候选词个数设置为5</span></span><br></pre></td></tr></table></figure>
+
+<p>重新部署后就可以看到效果了。</p>
+<h2 id="添加词库"><a href="#添加词库" class="headerlink" title="添加词库"></a>添加词库</h2><h3 id="词库类型介绍"><a href="#词库类型介绍" class="headerlink" title="词库类型介绍"></a>词库类型介绍</h3><p>Rime 的词库分为两种，一种是用户词库，一种是外来词库（外来码表）：</p>
+<ul>
+<li>用户词库</li>
+</ul>
+<p>用户词库可以通过使用 <code>rime_dict_manager</code> 来添加，它用来添加 <code>.txt</code> 格式的词库，如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rime_dict_manager -i zhwiki.txt</span><br></pre></td></tr></table></figure>
+
+<p>用户词库可以学习用户输入的内容，但是，如果添加过多的用户词库，会造成输入法卡顿</p>
+<ul>
+<li>外来词库</li>
+</ul>
+<p>外来词库通过编辑词库文件来添加词库，可以新建一个扩展名为 <code>.dict.yaml</code> 的文件来添加外来词库，在<strong>我的</strong> Rime 用户目录执行 <code>ls</code> 命令后，输入内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line"></span><br><span class="line">build</span><br><span class="line">default.custom.yaml</span><br><span class="line">double_pinyin_flypy.custom.yaml</span><br><span class="line">installation.yaml</span><br><span class="line">luna_pinyin.userdb</span><br><span class="line">mydict.dict.yaml</span><br><span class="line">mydict.userdb</span><br><span class="line">user.yaml</span><br><span class="line">清华开源IT词库.dict.yaml</span><br><span class="line">清华开源成语词库.dict.yaml</span><br><span class="line">维基百科词库.dict.yaml</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>mydict.dict.yaml</code> 的是输入法使用的词库文件，同时这个词库文件还引入了<code>清华开源IT词库.dict.yaml</code>、<code>清华开源成语词库.dict.yaml</code>、<code>维基百科词库.dict.yaml</code> 这三个词库，以达到添加多个词库的目的，不直接通过编辑输入法方案文件来添加词库是因为使用多个文件可以更好地管理词库。</p>
+<h3 id="添加步骤"><a href="#添加步骤" class="headerlink" title="添加步骤"></a>添加步骤</h3><p>首先编辑你的输入法方案文件，我这里是 <code>double_pinyin_flypy.custom.yaml</code>，然后添加下面的代码来指定要添加的词库：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">patch:</span></span><br><span class="line">  <span class="attr">&quot;translator/dictionary&quot;:</span> <span class="string">mydict</span> <span class="comment"># 此处填写你的词库名称</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在 Rime 用户目录下新建一个名为 <code>&lt;dict_name&gt;.dict.yaml</code> 的文件，应与上文的词库名称一致。接着在里面加入一些内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">mydict</span>      <span class="comment"># 词库名称</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&quot;0.1&quot;</span>    <span class="comment"># 词库版本</span></span><br><span class="line"><span class="attr">sort:</span> <span class="string">by_weight</span>   <span class="comment"># 词库内容的排序方式</span></span><br><span class="line"><span class="attr">use_preset_vocabulary:</span> <span class="literal">true</span>    <span class="comment"># 是否启用 Rime 内置的「八股文」码表，建议启用，否则可能打不出字</span></span><br><span class="line"><span class="attr">import_tables:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">luna_pinyin</span>     <span class="comment"># 在此引入外来词库，可以引入多个词库</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+<p>上文中， <code>luna_pinyin</code> 是 Rime 的朙月拼音内置的用户词库，因为有了这个词库，Rime 才可以在不添加外来词库的情况下打出一些日常的词语。同时它作为用户词库，也会学习你输入的内容，建议添加上去。如果你不想使用这个词库的话，也可以不添加。</p>
+<p>但是我们的词库肯定不能只有 <code>luna_pinyin</code> 这一个词库，我们可以从网上下载一些常用的词库，我这里推荐两个：<a target="_blank" rel="noopener" href="https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/tag/0.2.3">维基百科中文词库</a>和<a target="_blank" rel="noopener" href="http://thuocl.thunlp.org/">清华大学开放中文词库</a>。</p>
+<p>对于维基百科的词库，下载它发布页面上最新的以 <code>.dict.yaml</code> 结尾的文件即可，如果下载太慢的话可以使用一些加速下载的<a target="_blank" rel="noopener" href="https://d.serctl.com/">网站</a>。下载完成后，可以看到它的文件头有这些内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">zhwiki</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&quot;2022.01.01&quot;</span></span><br><span class="line"><span class="attr">sort:</span> <span class="string">by_weight</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到这个词库的名称是 <code>zhwiki</code>，但是这个词库的文件名并不是 zhwiki，我们最好使词库名和词库文件名保持一致，所以先将这个词库的文件名修改为 <code>zhwiki</code>，然后把它放到 Rime 的用户目录中，此时文件目录应该如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">build</span><br><span class="line">default.custom.yaml</span><br><span class="line">double_pinyin_flypy.custom.yaml</span><br><span class="line">installation.yaml</span><br><span class="line">luna_pinyin.userdb</span><br><span class="line">mydict.dict.yaml</span><br><span class="line">user.yaml</span><br><span class="line">zhwiki.dict.yaml</span><br></pre></td></tr></table></figure>
+
+<p>然后在词库文件中引入刚才的词库：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">mydict</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&quot;0.1&quot;</span></span><br><span class="line"><span class="attr">sort:</span> <span class="string">by_weight</span></span><br><span class="line"><span class="attr">use_preset_vocabulary:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import_tables:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">luna_pinyin</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">zhwiki</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+<p>最后重新部署，就可以正常使用这个词库了。你可以输入 <code>wei&#39;ya&#39;mu</code> 来测试一下。清华大学添加词库的方式也与这个类似。</p>
+<blockquote>
+<p>如果你使用 ArchLinux，你可能会从别人的教程那里看到可以通过安装 <code>fcitx5-pinyin-zhwiki-rime</code> 这个包来添加中文维基百科的词库，但是实测后发现 Rime 并没有正常地使用这个词库，所以不建议使用这种方式来添加词库</p>
+</blockquote>
+<p>又可以愉快地使用小鹤双拼来输入中文了！</p>
 
     </div>
 
@@ -315,6 +370,24 @@
   </span>
   <span class="author" itemprop="copyrightHolder">刘志军</span>
 </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
@@ -332,6 +405,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
