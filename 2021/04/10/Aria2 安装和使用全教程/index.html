@@ -14,18 +14,18 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"liuzhijun-source.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"right","width":220,"display":"hide","padding":16,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Aria2介绍Aria2是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2拥有众多的———没错，缺点！！！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，盖提亚，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用Aria2的人，我还是出一期教程吧。">
+<meta name="description" content="Aria2 介绍Aria2 是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2 拥有众多的——没错，缺点！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，还有，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用 Aria2 的人，我还是出一期教程吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Aria2 安装和使用教程">
 <meta property="og:url" content="https://liuzhijun-source.github.io/2021/04/10/Aria2%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">
 <meta property="og:site_name" content="刘志军的个人站点">
-<meta property="og:description" content="Aria2介绍Aria2是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2拥有众多的———没错，缺点！！！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，盖提亚，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用Aria2的人，我还是出一期教程吧。">
+<meta property="og:description" content="Aria2 介绍Aria2 是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2 拥有众多的——没错，缺点！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，还有，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用 Aria2 的人，我还是出一期教程吧。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210410124838674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210410125130605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210410133356548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2021041013351176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-04-10T05:42:25.000Z">
-<meta property="article:modified_time" content="2022-01-21T09:01:34.723Z">
+<meta property="article:modified_time" content="2022-01-22T10:56:39.855Z">
 <meta property="article:author" content="刘志军">
 <meta property="article:tag" content="Aria2">
 <meta name="twitter:card" content="summary">
@@ -135,7 +135,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Aria2%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Aria2介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">软件下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">软件安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">配置教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">开始使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AriaNg"><span class="nav-number">7.</span> <span class="nav-text">AriaNg</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aria2%E6%89%A9%E5%B1%95"><span class="nav-number">8.</span> <span class="nav-text">Aria2扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E5%B0%BE"><span class="nav-number">9.</span> <span class="nav-text">结尾</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Aria2-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Aria2 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">配置教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">开始使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AriaNg"><span class="nav-number">7.</span> <span class="nav-text">AriaNg</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aria2%E6%89%A9%E5%B1%95"><span class="nav-number">8.</span> <span class="nav-text">Aria2扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E5%B0%BE"><span class="nav-number">9.</span> <span class="nav-text">结尾</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-01-21 17:01:34" itemprop="dateModified" datetime="2022-01-21T17:01:34+08:00">2022-01-21</time>
+      <time title="修改时间：2022-01-22 18:56:39" itemprop="dateModified" datetime="2022-01-22T18:56:39+08:00">2022-01-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -260,23 +260,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Aria2介绍"><a href="#Aria2介绍" class="headerlink" title="Aria2介绍"></a>Aria2介绍</h2><p>Aria2是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2拥有众多的———没错，缺点！！！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，盖提亚，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用Aria2的人，我还是出一期教程吧。</p>
-<span id="more"></span>
-
-<h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><p>首先，打开<a target="_blank" rel="noopener" href="http://aria2.github.io/">Aria2官网</a>，我们可以看到中间有一个名为“version 1.35.0”的字样，点击它，就可以进入Aria2的下载页面了！！！<br><img src="https://img-blog.csdnimg.cn/20210410124838674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击后跳转到了一个GitHub的发布页面，网站加载可能有点慢，大家需要耐心等待，滑到底部，看到下载列表<br><img src="https://img-blog.csdnimg.cn/20210410125130605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>下载完成后是一个压缩包，解压完成后是个文件夹，里面的文件如图所示<br><img src="https://img-blog.csdnimg.cn/20210410125322779.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我们把它改个名字（也可以不改），放到自己喜欢的地方，我这里为了方便，就直接放C盘了。<br><img src="https://img-blog.csdnimg.cn/2021041012545017.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来是添加环境变量了，这个步骤是为了我们可以在命令行中使用Aria2，如果你想使用Web端来进行控制，也可以选择不添加，不过不乏有只想使用命令行来装B的盆友们，所以还是建议你看一下，当然也可以跳过。<br><img src="https://img-blog.csdnimg.cn/2021041012565820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开文件夹，复制上方的路径，然后右键桌面上的“此电脑”，选择“属性”，在弹出的窗口中单击“高级系统设置”（如果没有可以向下滑动鼠标），再在弹出的窗口中点击“环境变量”，再在弹出的窗口中双击“Path”<br><img src="https://img-blog.csdnimg.cn/20210410130037581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>双击“Path”后，看到如下图像，我们点击右边的“新建”，然后在文本框中填入刚才复制的Aria2路径，然后一路确定退出就可以了。<br><img src="https://img-blog.csdnimg.cn/2021041013022045.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>其实，到目前为止，Aria2已经可以正常使用了，你只需要打开命令提示符，输入<code>aria2c 下载地址</code>就可以开始下载文件了，不过现在还只能用命令行使用，接下来是为了使用Web端控制的配置教程。<br><img src="https://img-blog.csdnimg.cn/20210410130646633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <h2 id="Aria2-介绍"><a href="#Aria2-介绍" class="headerlink" title="Aria2 介绍"></a>Aria2 介绍</h2><p>Aria2 是一个命令行下载器，相比于迅雷、IDM、比特彗星，Aria2 拥有众多的——没错，缺点！不过，还是有一些能用到它的场景的，就比如百度网盘下载（虽然感觉百度网盘增加下载加速功能之后没必要了，还有，我不会介绍百度网盘下载加速方法），不过鉴于还是有很多想用 Aria2 的人，我还是出一期教程吧。<span id="more"></span></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>首先，打开 <a target="_blank" rel="noopener" href="http://aria2.github.io/">Aria2官网</a>，我们可以看到中间有一个“version 1.36.0”的字样，点击它，就可以进入 Aria2 的下载页面了，<br><img src="https://img-blog.csdnimg.cn/20210410124838674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 的官网"><br>点击后跳转到了一个GitHub的发布页面，网站加载可能有点慢，大家需要耐心等待，滑到底部，看到下载列表<br><img src="https://img-blog.csdnimg.cn/20210410125130605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 的 GitHub 发布页面"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>下载完成后是一个压缩包，解压完成后是个文件夹，里面的文件如图所示<br><img src="https://img-blog.csdnimg.cn/20210410125322779.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 的文件示意图"><br>我们把它改个名字（也可以不改），放到自己喜欢的地方，我这里为了方便，就直接放C盘了。<br><img src="https://img-blog.csdnimg.cn/2021041012545017.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 应用程序文件夹放置的位置"><br>接下来是添加环境变量了，这个步骤是为了我们可以在命令行中使用Aria2，如果你想使用Web端来进行控制，也可以选择不添加，不过不乏有只想使用命令行来装B的盆友们，所以还是建议你看一下，当然也可以跳过。<br><img src="https://img-blog.csdnimg.cn/2021041012565820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="复制 Aria2 应用程序文件夹的路径"><br>打开文件夹，复制上方的路径，然后右键桌面上的“此电脑”，选择“属性”，在弹出的窗口中单击“高级系统设置”（如果没有可以向下滑动鼠标），再在弹出的窗口中点击“环境变量”，再在弹出的窗口中双击“Path”<br><img src="https://img-blog.csdnimg.cn/20210410130037581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="环境变量管理界面"><br>双击“Path”后，看到如下图像，我们点击右边的“新建”，然后在文本框中填入刚才复制的Aria2路径，然后一路确定退出就可以了。<br><img src="https://img-blog.csdnimg.cn/2021041013022045.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="新建一个环境变量"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>其实，到目前为止，Aria2已经可以正常使用了，你只需要打开命令提示符，输入<code>aria2c 下载地址</code>就可以开始下载文件了，不过现在还只能用命令行使用，接下来是为了使用Web端控制的配置教程。<br><img src="https://img-blog.csdnimg.cn/20210410130646633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 在终端下使用的示意图"></p>
 <h2 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h2><p>点击<a target="_blank" rel="noopener" href="https://aria2c.com/archiver/aria2.zip">这个下载链接</a>，打开下载完后的压缩包后，把里面的aria2.exe、aria2.conf、aria2.session三个文件复制到原先Aria2的安装文件夹里，然后用记事本打开aria2.conf，你会看到一大堆的文字，别担心，我们只修改其中的一两个配置。</p>
-<p>把<code>dir=Aria2Data</code>中的Aria2Date修改成自己喜欢的下载路径，注意，如果路径填错了，是不能正常下载文件的！</p>
-<p>把<code>max-connection-per-server=5</code>中的数字5修改成16，这个设置是为了提升下载速度，最大数值为16，可以自己选择</p>
-<p>把<code>split=5</code>中的数字5修改成自己想要的数字，同样是为了加快下载速度，数值没有上限，一般32就够了</p>
-<p>完成这些后，保存退出，配置就完成了，是不是很简单？</p>
-<p>**<code>很重要的声明</code>**：以上的这些配置包括aria2.conf中的所有配置，都只会在接下来的Web控制端中生效，不会再命令行下载中生效，对于命令行的使用是没有一点用处的！希望大家避开这个坑。</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>双击Aria2安装文件夹中的aria2.exe来启动Aria2，右下角应该会出现他的图标，现在我们进入这个网址<a target="_blank" rel="noopener" href="http://aria2c.com/">http://aria2c.com/</a>，这个是Aria2的Web控制端，可以比较方便的管理下载任务。</p>
-<p>我们可以看到右上角显示着当前aria2的版本号和下载速度，注意：只有启动了aria2.exe后才可以正常的使用Web控制端，否则是没有用的。<br><img src="https://img-blog.csdnimg.cn/20210410132207614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>单击左边的新建，来添加第一个下载任务.<br><img src="https://img-blog.csdnimg.cn/20210410132604365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>简单的填写信息后，就可以点击添加开始下载了，因为进行了配置，所以有一些信息自动为我们进行了填写。</p>
+<p>把 <code>dir=Aria2Data</code> 中的Aria2Date修改成自己喜欢的下载路径，注意，如果路径填错了，是不能正常下载文件的！</p>
+<p>把 <code>max-connection-per-server=5</code> 中的数字5修改成16，这个设置是为了提升下载速度，最大数值为16，可以自己选择</p>
+<p>把 <code>split=5</code> 中的数字5修改成自己想要的数字，同样是为了加快下载速度，数值没有上限，一般32就够了</p>
+<p>完成这些后，保存退出，配置就完成了。</p>
+<p><strong>很重要的声明</strong>：以上的这些配置包括aria2.conf中的所有配置，都只会在接下来的Web控制端中生效，不会再命令行下载中生效，对于命令行的使用是没有一点用处的！希望大家避开这个坑。</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>双击 Aria2 安装文件夹中的 aria2.exe 来启动 Aria2，右下角应该会出现他的图标，现在我们进入<a target="_blank" rel="noopener" href="http://aria2c.com/">这个网页</a>，它是 Aria2 的 Web 控制端，可以比较方便的管理下载任务。</p>
+<p>我们可以看到右上角显示着当前 aria2 的版本号和下载速度，注意：只有启动了 aria2.exe 后才可以正常的使用 Web 控制端，否则是没有用的。<br><img src="https://img-blog.csdnimg.cn/20210410132207614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Aria2 Web 控制台的界面"><br>单击左边的新建，来添加第一个下载任务.<br><img src="https://img-blog.csdnimg.cn/20210410132604365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="新建下载任务"><br>简单的填写信息后，就可以点击添加开始下载了，因为进行了配置，所以有一些信息自动为我们进行了填写。</p>
 <p>接下来，我们可以尝试使用一些更为方便好用的Web控制端。</p>
-<h2 id="AriaNg"><a href="#AriaNg" class="headerlink" title="AriaNg"></a>AriaNg</h2><p>打开<a target="_blank" rel="noopener" href="https://github.com/mayswind/AriaNg/releases">这个页面</a>，点击下载列表中的“AriaNg-1.2.1-AllInOne.zip”进行下载，打开下载完的压缩包，我们可以看到里面有一个名为“index.html”的文件，双击它，可以看到以下画面<br><img src="https://img-blog.csdnimg.cn/20210410133114852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>很漂亮有没有？他的操作方法与之前使用的Web控制端大同小异，而且功能还更多，大家可以自己去探索</p>
-<h2 id="Aria2扩展"><a href="#Aria2扩展" class="headerlink" title="Aria2扩展"></a>Aria2扩展</h2><p>每次要用Aria2下载文件的时候，总是要复制下载链接，然后粘贴到别的地方才能进行下载，使用浏览器扩展，可以很方便的解决这个问题。进入浏览器自带的扩展商店，搜索aria2，一般可以看到这个扩展<br><img src="https://img-blog.csdnimg.cn/20210410133356548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装他之后，进行一些简单的配置，就可以实现“右键导出下载”，“自动拦截下载任务”等功能了，这里就不过多赘述了<br><img src="https://img-blog.csdnimg.cn/2021041013351176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看到，功能还是很多的。<br>不过，这个一切的大前提是，aria2.exe保持打开状态，如果一不小心手贱关掉了，就不能正常使用Web控制端了，需要重新打开</p>
+<h2 id="AriaNg"><a href="#AriaNg" class="headerlink" title="AriaNg"></a>AriaNg</h2><p>打开<a target="_blank" rel="noopener" href="https://github.com/mayswind/AriaNg/releases">AriaNg 的发行页面</a>，点击下载列表中的“AriaNg-1.2.1-AllInOne.zip”进行下载，打开下载完的压缩包，我们可以看到里面有一个名为“index.html”的文件，双击它，可以看到以下画面<br><img src="https://img-blog.csdnimg.cn/20210410133114852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="AriaNg 管理界面"><br>它的操作方法与之前使用的Web控制端大同小异，而且功能还更多，大家可以自己去探索</p>
+<h2 id="Aria2扩展"><a href="#Aria2扩展" class="headerlink" title="Aria2扩展"></a>Aria2扩展</h2><p>每次要用Aria2下载文件的时候，总是要复制下载链接，然后粘贴到别的地方才能进行下载，使用浏览器扩展，可以很方便的解决这个问题。进入浏览器自带的扩展商店，搜索aria2，一般可以看到这个扩展<br><img src="https://img-blog.csdnimg.cn/20210410133356548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="Edge 浏览器上有关 Aria2 的扩展"><br>安装他之后，进行一些简单的配置，就可以实现“右键导出下载”，“自动拦截下载任务”等功能了，这里就不过多赘述了<br><img src="https://img-blog.csdnimg.cn/2021041013351176.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU1MDU4MDA2,size_16,color_FFFFFF,t_70" alt="AriaNg 扩展配置界面"><br>可以看到，功能还是很多的。<br>不过，这个一切的大前提是，aria2.exe保持打开状态，如果一不小心手贱关掉了，就不能正常使用Web控制端了，需要重新打开</p>
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>完……</p>
 
     </div>
@@ -342,24 +340,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">刘志军</span>
 </div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
@@ -377,7 +357,6 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
